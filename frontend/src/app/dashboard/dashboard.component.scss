@@ -1,0 +1,20 @@
+.data-table {
+    height: auto;
+    max-height: calc(100vh - 335px);
+    overflow: auto;
+    td {
+        text-align: left !important;
+    }
+}
+
+.card {
+    .card-header {
+        border-radius: 4px !important;
+    }
+}
+
+:host ::ng-deep canvas {
+    height: 280px !important;
+    width: 280px !important;
+    margin: auto !important;
+}

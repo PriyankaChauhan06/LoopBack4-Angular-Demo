@@ -1,0 +1,22 @@
+{
+  "ids": {
+    "Product": 16,
+    "TransactionItem": 14
+  },
+  "models": {
+    "Product": {
+      "1": "{\"name\":\"Refrigerator\",\"price\":14000,\"description\":\"test\",\"id\":1}",
+      "2": "{\"name\":\"TV\",\"price\":15000,\"description\":\"test\",\"id\":2}",
+      "9": "{\"name\":\"Air cooler\",\"price\":16000,\"description\":\"AC\",\"id\":9}",
+      "13": "{\"name\":\"product-one\",\"price\":17000,\"description\":\"TEST\",\"id\":13}",
+      "15": "{\"name\":\"product-two\",\"price\":20000,\"id\":15}"
+    },
+    "TransactionItem": {
+      "7": "{\"quantity\":1,\"transactionDate\":\"2023-05-01T09:02:57.000Z\",\"productId\":1,\"id\":7}",
+      "8": "{\"quantity\":2,\"transactionDate\":\"2023-05-02T09:03:07.000Z\",\"productId\":2,\"id\":8}",
+      "9": "{\"quantity\":3,\"transactionDate\":\"2023-05-03T09:03:16.000Z\",\"productId\":9,\"id\":9}",
+      "12": "{\"quantity\":3,\"transactionDate\":\"2023-03-29T09:30:40.000Z\",\"productId\":13,\"id\":12}",
+      "13": "{\"quantity\":2,\"transactionDate\":\"2023-03-30T09:51:11.000Z\",\"productId\":15,\"id\":13}"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "routList": [
+        { "menu": [{ "label": "Dashboard", "icon": "fa-solid fa-chart-line", "link": "/dashboard", "isActive": false }] },
+        { "menu": [{ "label": "Product", "icon": "fa-solid fa-calendar-check", "link": "/product", "isActive": false }] },
+        { "menu": [{ "label": "Sale", "icon": "fa-solid fa-calendar-user", "link": "/sale", "isActive": false }] }
+    ],
+    "languagesList": [
+        { "lang": "en", "name": "English", "flag": "./assets/media/flags/united-states.svg" },
+        { "lang": "zh", "name": "Mandarin", "flag": "./assets/media/flags/china.svg" },
+        { "lang": "es", "name": "Spanish", "flag": "./assets/media/flags/spain.svg" },
+        { "lang": "ja", "name": "Japanese", "flag": "./assets/media/flags/japan.svg" },
+        { "lang": "de", "name": "German", "flag": "./assets/media/flags/germany.svg" },
+        { "lang": "fr", "name": "French", "flag": "./assets/media/flags/france.svg" }
+    ]
+}

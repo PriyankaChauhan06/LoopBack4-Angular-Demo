@@ -1,0 +1,54 @@
+<p-dialog [header]="sale.id ? 'Edit Sale' : 'Create Sale'" [(visible)]="displayDialog" [modal]="true" [responsive]="true" [draggable]="false" [resizable]="false" [positionTop]="50" [maximizable]="false" [baseZIndex]="1000" (onHide)="closeDialog()">
+    <form name="form" class="form-row m-0" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" novalidate>
+        <div class="col-md-12 p-0">
+            <div class="card card-primary mb-0">
+                <div class="row">
+
+                    <!-- Product -->
+                    <div class="col-md-12 form-group input-error">
+                        <div class="d-flex align-items-center mb-2">
+                            <label for="productId">Product</label>
+                            <i class="fa fa-asterisk"></i>
+                        </div>
+                        <p-dropdown [options]="productOption" name="productId" #productId="ngModel" [filter]="true" [styleClass]="f.submitted && productId.invalid ? 'w-100 border-0' : 'w-100'" placeholder="Select product" [(ngModel)]="sale.productId" [required]="true" [ngClass]="{'is-invalid form-control': f.submitted && productId.invalid}"
+                            appendTo="body" [baseZIndex]="1900">
+                        </p-dropdown>
+                        <div *ngIf="f.submitted && productId.invalid" class="invalid-feedback">
+                            <div *ngIf="productId?.errors?.required!">Please select Product</div>
+                        </div>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="col-md-12 form-group my-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <label for="quantity">Quantity</label>
+                            <i class="fa fa-asterisk"></i>
+                        </div>
+                        <input type="number" name="quantity" class="form-control" [(ngModel)]="sale.quantity" #quantity="ngModel" [ngClass]="{ 'is-invalid': f.submitted && quantity.invalid }" placeholder="Enter Sale Quantity" required>
+                        <div *ngIf="f.submitted && quantity.invalid" class="invalid-feedback">
+                            <div *ngIf="quantity?.errors?.required!">Quantity is required</div>
+                        </div>
+                    </div>
+
+                    <!-- Transaction Date -->
+                    <div class="col-md-12 form-group input-error">
+                        <div class="d-flex align-items-center mb-2">
+                            <label for="transactionDate">Transaction Date</label>
+                            <i class="fa fa-asterisk"></i>
+                        </div>
+                        <p-calendar dateFormat="dd/mm/yy" appendTo="body" [baseZIndex]="1900" name="transactionDate" [inputStyleClass]="f.submitted && transactionDate.invalid ? 'w-100 border-0' : 'w-100'" [yearNavigator]="true" [yearRange]="'1900:'+date.getFullYear()" [showTime]="true"
+                            inputId="time" [minDate]="date" class="w-100 overide-class" styleClass="w-100" [showSeconds]="true" [(ngModel)]="sale.transactionDate" #transactionDate="ngModel" [monthNavigator]="true" [ngClass]="{'is-invalid form-control': f.submitted && transactionDate.invalid}"
+                            placeholder="Enter transaction date" [required]="true"></p-calendar>
+                        <div *ngIf="f.submitted && transactionDate.invalid" class="invalid-feedback">
+                            <div *ngIf="transactionDate?.errors?.required!">Please enter transaction date</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mt-4 d-flex justify-content-end mt-4">
+                        <button type="submit" class="btn btn-sm btn-outline-primary" [disabled]="!sale.productId || !sale.quantity || !sale.transactionDate">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</p-dialog>

@@ -1,0 +1,173 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/sass/style.scss";
+@import "./assets/sass/table.scss";
+// @import "./assets/sass/style";
+// Replace above style with this css file to enable RTL styles
+// @import "./assets/css/style.rtl";
+// @import "./assets/scss/loading-animation";
+@import './assets/sass/plugins.scss';
+@import "./assets/sass/style.angular.scss";
+
+.action {
+  width: 1px;
+  white-space: nowrap;
+}
+
+.w-max-content {
+  width: max-content !important;
+}
+
+.card-outline, .p-dialog-header {
+  border-top: 4px solid #1b7ad9;
+  border-radius: 4px;
+}
+
+.p-dialog-header {
+  padding: 16px !important;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid #c5c1c17a !important;
+}
+.p-dialog-content{
+  padding: 16px !important;
+}
+.fa{
+  font-size: 6px;
+}
+.btn {
+  padding: 7px 12px !important;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+//input error css
+.input-error .form-control {
+  padding: 0px !important;
+  line-height: 1.45 !important;
+}
+.screen {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  .screen-header {
+    padding: 14px;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 16px;
+    color: #555353bd;
+  }
+}
+
+.upload-image {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  height: auto;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    position: relative;
+  }
+}
+.image-content {
+  width: 100px;
+  position: relative;
+  height: 100px;
+  -o-object-fit: cover;
+  opacity: 1;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    position: relative;
+  }
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    opacity: 0;
+  }
+  &:hover {
+    i { opacity: 1; color: #fff; }
+    opacity: 0.4;
+    cursor: pointer;
+    background: #e0e0e0;
+    border-color: #1890ff;
+  }
+}
+
+::placeholder {
+  color: #6c757d !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+}
+
+//input error css
+.input-error .form-control {
+  padding: 0px !important;
+  line-height: 1.45 !important;
+}
+.btn-outline-secondary {
+  i { color: #a1a3ab !important; }
+  color: #a1a3ab !important;
+  border-color: #a1a3ab !important;
+}
+// search
+.search {
+  background: #f4f6f9 !important;
+  position: relative;
+  width: fit-content;
+  box-shadow: none;
+  min-width: 250px;
+  border-radius: 4px;
+  input {
+    background: #f4f6f9 !important;
+    border: none;
+    width: 100% !important;
+    max-width: 234px;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  i {
+    position: absolute;
+    right: 4%;
+    top: 12px;
+    color: #616262;
+    cursor: pointer;
+    font-size: 14px;
+
+    :hover {
+      color: #007bff;
+    }
+  }
+}
+
+.content {
+  border: 1px solid #c5c1c17a;
+  border-radius: 4px;
+}
+
+.item:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+  cursor: pointer !important;
+}
+
+.dashboard-card {
+  box-shadow: 0px 0px 20px 0px rgba(76, 87, 125, 0.02);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #403e3e7b;
+  border-radius: 8px;
+}

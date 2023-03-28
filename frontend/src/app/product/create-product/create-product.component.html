@@ -1,0 +1,47 @@
+<p-dialog [header]="product.id ? 'Edit Product' : 'Create Product'" [(visible)]="displayDialog" [modal]="true" [responsive]="true" [draggable]="false" [resizable]="false" [positionTop]="50" [maximizable]="false" [baseZIndex]="1000" (onHide)="closeDialog()">
+    <form name="form" class="form-row m-0" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" novalidate>
+        <div class="col-md-12 p-0">
+            <div class="card card-primary mb-0">
+                <div class="row">
+
+                    <!-- Name -->
+                    <div class="col-md-12 form-group">
+                        <div class="d-flex align-items-center mb-2">
+                            <label for="name">Name</label>
+                            <i class="fa fa-asterisk"></i>
+                        </div>
+                        <input type="text" name="name" class="form-control" [(ngModel)]="product.name" #name="ngModel" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" placeholder="Enter Product Name" required>
+                        <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+                            <div *ngIf="name?.errors?.required!">Product name is required</div>
+                        </div>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="col-md-12 form-group my-3">
+                        <div class="d-flex align-items-center mb-2">
+                            <label for="price">Price</label>
+                            <i class="fa fa-asterisk"></i>
+                        </div>
+                        <input type="number" name="price" class="form-control" [(ngModel)]="product.price" #price="ngModel" [ngClass]="{ 'is-invalid': f.submitted && price.invalid }" placeholder="Enter Product Price" required>
+                        <div *ngIf="f.submitted && price.invalid" class="invalid-feedback">
+                            <div *ngIf="price?.errors?.required!">Price is required</div>
+                        </div>
+                    </div>
+
+
+                    <!-- Description -->
+                    <div class="col-md-12 form-group">
+                        <div class="mb-2">
+                            <label for="description">Description</label>
+                        </div>
+                        <input type="text" name="description" class="form-control" [(ngModel)]="product.description" #name="ngModel" placeholder="Enter Product Description">
+                    </div>
+
+                    <div class="col-md-12 mt-4 d-flex justify-content-end mt-4">
+                        <button type="submit" class="btn btn-sm btn-outline-primary" [disabled]="!product.name || !product.price">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</p-dialog>
